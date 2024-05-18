@@ -17,7 +17,10 @@ try {
     .catch((error) => {
       console.log(error.message);
     });
-} catch (error) {}
+} catch (error) {
+  console.log("mongodb error :", error);
+}
+
 app.get("/", (req, res) => {
   res.send("Hello World");
 });
