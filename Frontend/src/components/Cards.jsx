@@ -3,8 +3,8 @@ import React from "react";
 const Cards = ({ item }) => {
   return (
     <>
-      <div className="mt-4 my-3">
-        <div className="card w-80 ml-7 p-3 bg-base-100 shadow-xl hover:scale-105 duration-200">
+      <div className="mt-4 my-3 dark:bg-slate-900 dark:text-white">
+        <div className="card w-80 ml-7 p-3 bg-base-100 shadow-xl hover:scale-105 duration-200 dark:bg-slate-900 dark:text-white">
           <figure>
             <img src={item.image} alt="image" />
           </figure>

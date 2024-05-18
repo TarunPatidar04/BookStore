@@ -17,7 +17,7 @@ const Banner = () => {
               voluptatem harum consectetur error quas! Pariatur, voluptatum
               quis?
             </p>
-            <label className="input input-bordered flex items-center gap-2">
+            <label className="input input-bordered flex items-center gap-2 dark:bg-slate-900 dark:text-white">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 16 16"
