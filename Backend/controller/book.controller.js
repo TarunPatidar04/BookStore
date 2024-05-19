@@ -12,7 +12,6 @@ export const getBook = async (req, res) => {
 export const postBook = async (req, res) => {
   try {
     const body = req.body;
-    console.log(body)
     const book = await Book.create(body);
     if (!book) {
       return res.status(400).json({ message: "Invalid book data" });

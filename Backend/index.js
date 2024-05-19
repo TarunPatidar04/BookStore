@@ -34,11 +34,6 @@ app.use("/book", bookRoute);
 //define user route
 app.use("/user", userRoute);
 
-
-app.get("/", (req, res) => {
-  res.send("Hello World");
-});
-
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
