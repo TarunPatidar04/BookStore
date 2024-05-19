@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Login from "./Login.jsx";
 import { useForm } from "react-hook-form";
+import axios from "axios";
+import toast from "react-hot-toast";
 
 const Signup = () => {
   const {
@@ -9,7 +11,33 @@ const Signup = () => {
     register,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = async (data) => {
+    const userInfo = {
+      fullname: data.fullname,
+      email: data.email,
+      password: data.password,
+    };
+
+    await axios
+      .post("http://localhost:3000/user/signup", userInfo, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+      .then((res) => {
+        if (res.data) {
+          toast.success("Signup successfully");
+        }
+
+        localStorage.setItem("Users", JSON.stringify(res.data.user));
+      })
+      .catch((err) => {
+        if (err.response) {
+          console.log(err);
+          toast.error(" error " + err.response.data.message);
+        }
+      });
+  };
   return (
     <>
       <div className="flex h-screen items-center justify-center ">
@@ -29,10 +57,10 @@ const Signup = () => {
                   type="text"
                   placeholder="Enter your full name"
                   className="w-80 py-1 px-3 border outline-none rounded-md"
-                  {...register("name", { required: true })}
+                  {...register("fullname", { required: true })}
                 />{" "}
                 <br />
-                {errors.name && (
+                {errors.fullname && (
                   <span className="text-sm text-pink-500">
                     This field is required
                   </span>
