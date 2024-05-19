@@ -4,6 +4,7 @@ import mongoose from "mongoose";
 import cors from "cors";
 dotenv.config();
 import bookRoute from "./routes/book.route.js";
+import userRoute from "./routes/user.route.js";
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -29,6 +30,10 @@ try {
 // define a route
 app.use("/book", bookRoute);
 app.use("/book", bookRoute);
+
+//define user route
+app.use("/user", userRoute);
+
 
 app.get("/", (req, res) => {
   res.send("Hello World");
