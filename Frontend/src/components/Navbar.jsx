@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Login from "./Login";
-
+import Logout from "./Logout";
+import { useAuth } from "../contextt/AuthProvider";
 const Navbar = () => {
+  const [authUser, setAuthUser] = useAuth();
   const [sticky, setSticky] = useState(false);
   const [theme, setTheme] = useState(
     localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
@@ -43,9 +45,9 @@ const Navbar = () => {
       <Link to="/course">
         <li className="p-2">Course</li>
       </Link>
-     <Link to="/contact">
-     <li className="p-2">Contact</li>
-     </Link>
+      <Link to="/contact">
+        <li className="p-2">Contact</li>
+      </Link>
       <li className="p-2">About</li>
     </>
   );
@@ -149,17 +151,21 @@ const Navbar = () => {
                 </svg>
               </label>
             </div>
-            <div className="">
-              <a
-                className="bg-black text-white px-3 py-2 rounded-md hover:bg-slate-800 duration-300 cursor-pointer"
-                onClick={() =>
-                  document.getElementById("my_modal_3").showModal()
-                }
-              >
-                Login
-              </a>
-              <Login />
-            </div>
+            {authUser ? (
+              <Logout />
+            ) : (
+              <div className="">
+                <a
+                  className="bg-black text-white px-3 py-2 rounded-md hover:bg-slate-800 duration-300 cursor-pointer"
+                  onClick={() =>
+                    document.getElementById("my_modal_3").showModal()
+                  }
+                >
+                  Login
+                </a>
+                <Login />
+              </div>
+            )}
           </div>
         </div>
       </div>

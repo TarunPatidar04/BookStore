@@ -26,9 +26,13 @@ const Login = () => {
       .then((res) => {
         if (res.data) {
           toast.success("Login successfully");
-        }
+          document.getElementById("my_modal_3").close();
 
-        localStorage.setItem("Users", JSON.stringify(res.data.user));
+          setTimeout(() => {
+            window.location.reload();
+            localStorage.setItem("Users", JSON.stringify(res.data.user));
+          }, 1000);
+        }
       })
       .catch((err) => {
         if (err.response) {
@@ -42,7 +46,12 @@ const Login = () => {
         <div className="modal-box">
           <form method="dialog" onSubmit={handleSubmit(onSubmit)}>
             {/* if there is a button in form, it will close the modal */}
-            <Link to="/">
+            <Link
+              to="/"
+              onClick={() => {
+                document.getElementById("my_modal_3").close();
+              }}
+            >
               <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
                 ✕
               </button>
