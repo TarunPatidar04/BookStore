@@ -21,16 +21,14 @@ const Course = () => {
       <div className="max-w-screen-2xl container mx-auto md:px-20 px-4">
         <div className="mt-28 items-center  justify-center text-center">
           <h1 className="text-2xl  md:text-4xl">
-            We're deligathed to have you{" "}
-            <span className="text-pink-500">Here : &#41; </span>
+          Welcome to our courses library! <br />
+            <span className="text-pink-500"> Explore and enrich your knowledge &#41; </span>
           </h1>
           <p className="mt-12 ">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
-            consectetur pariatur debitis necessitatibus esse accusamus iste,
-            quis aliquam culpa vitae suscipit laudantium tenetur iure temporibus
-            numquam ex ipsam? Cum, quod. Lorem, ipsum dolor sit amet consectetur
-            adipisicing elit. Explicabo magnam, soluta dolor modi debitis
-            numquam voluptatem earum fugiat esse nostrum?
+          Dive into our vast collection of books covering various topics and genres. Whether you're
+          interested in expanding your skills, exploring new hobbies, or delving into captivating
+          stories, we have something for everyone. Start your journey today and unlock the door to
+          endless learning possibilities.
           </p>
           <Link to="/">
             <button className="bg-pink-500 text-white px-4 py-2 rounded-md hover:bg-pink-700 duration-300 mt-6 cursor-pointer">

@@ -8,14 +8,14 @@ const Banner = () => {
         <div className="md:w-1/2 w-full mt-12 md:mt-32 order-2 md:order-1">
           <div className="space-y-12">
             <h1 className="text-4xl font-bold">
-              Hello, welcome here to learn something{" "}
-              <span className="text-pink-500">new everyday !!!</span>
+            "Hello, welcome to
+              <span className="text-pink-500"> KitabKiDukan"!!!</span>
             </h1>
             <p className="text-xl ">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi,
-              enim accusamus aliquid tempore eligendi labore distinctio neque
-              voluptatem harum consectetur error quas! Pariatur, voluptatum
-              quis?
+            Discover a world of knowledge and adventure at KitabKiDukan. We
+              offer a vast collection of books across various genres to ignite
+              your imagination and broaden your horizons. Start your literary
+              journey with us today!
             </p>
             <label className="input input-bordered flex items-center gap-2 dark:bg-slate-900 dark:text-white">
               <svg

@@ -6,7 +6,7 @@ const Cards = ({ item }) => {
       <div className="mt-4 my-3 dark:bg-slate-900 dark:text-white">
         <div className="card w-80 ml-7 p-3 bg-base-100 shadow-xl hover:scale-105 duration-200 dark:bg-slate-900 dark:text-white">
           <figure>
-            <img src={item.image} alt="image" />
+            <img src={item.image} alt="image" className="h-96"/>
           </figure>
           <div className="card-body">
             <h2 className="card-title">
