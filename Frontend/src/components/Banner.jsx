@@ -8,11 +8,11 @@ const Banner = () => {
         <div className="md:w-1/2 w-full mt-12 md:mt-32 order-2 md:order-1">
           <div className="space-y-12">
             <h1 className="text-4xl font-bold">
-            "Hello, welcome to
+              "Hello, welcome to
               <span className="text-pink-500"> KitabKiDukan"!!!</span>
             </h1>
             <p className="text-xl ">
-            Discover a world of knowledge and adventure at KitabKiDukan. We
+              Discover a world of knowledge and adventure at KitabKiDukan. We
               offer a vast collection of books across various genres to ignite
               your imagination and broaden your horizons. Start your literary
               journey with us today!
